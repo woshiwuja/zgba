@@ -42,7 +42,6 @@ pub fn build(b: *std.Build) void {
     // This is what allows Zig source code to use `@import("foo")` where 'foo' is not a
     // file path. In this case, we set up `exe_mod` to import `lib_mod`.
     exe_mod.addImport("zgba_lib", lib_mod);
-
     // Now, we will create a static library based on the module we created above.
     // This creates a `std.Build.Step.Compile`, which is the build step responsible
     // for actually invoking the compiler.
@@ -51,7 +50,6 @@ pub fn build(b: *std.Build) void {
         .name = "zgba",
         .root_module = lib_mod,
     });
-
     // This declares intent for the library to be installed into the standard
     // location when the user invokes the "install" step (the default step when
     // running `zig build`).
@@ -63,6 +61,11 @@ pub fn build(b: *std.Build) void {
         .name = "zgba",
         .root_module = exe_mod,
     });
+    const zgba_dep = b.dependency("zgba", .{ .target, .optimize });
+    const zgba = zgba_dep.module("zgba");
+    const zgba_artifact = zgba_dep.artifact("zgba");
+    exe.linkLibrary(zgba_artifact);
+    exe.root_module.addImport("zgba", zgba);
     // This declares intent for the executable to be installed into the
     // standard location when the user invokes the "install" step (the default
     // step when running `zig build`).
