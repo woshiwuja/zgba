@@ -30,4 +30,4 @@ pub fn main() !void {
 }
 ```
 
-Follow the tonc docs for more examples and tutorials https://gbadev.net/tonc/first.html#sec-second
+Follow the tonc docs for more examples and tutorials https://gbadev.net/tonc/
