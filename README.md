@@ -29,3 +29,5 @@ pub fn main() !void {
     while (true) {}
 }
 ```
+
+Follow the tonc docs for more examples and tutorials https://gbadev.net/tonc/first.html#sec-second
