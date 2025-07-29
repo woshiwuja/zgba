@@ -1,0 +1,16 @@
+pub const bg_affine = @import("libtonc/tonc_bg_affine.zig");
+pub const bg = @import("libtonc/tonc_bg.zig");
+pub const bmp8 = @import("libtonc/tonc_bmp8.zig");
+pub const sbmp8 = @import("libtonc/tonc_sbmp8.zig");
+pub const bmp16 = @import("libtonc/tonc_bmp16.zig");
+pub const sbmp16 = @import("libtonc/tonc_sbmp16.zig");
+pub const color = @import("libtonc/tonc_color.zig");
+pub const core = @import("libtonc/tonc_core.zig");
+pub const input = @import("libtonc/tonc_input.zig");
+pub const irq = @import("libtonc/irq.zig");
+pub const surface = @import("libtonc/tonc_surface.zig");
+pub const math = @import("libtonc/tonc_math.zig");
+pub const oam = @import("libtonc/tonc_oam.zig");
+pub const video = @import("libtonc/tonc_video.zig");
+pub const schr4 = @import("libtonc/tonc_schr4.zig");
+pub const schr4r = @import("libtonc/tonc_schr4r.zig");
