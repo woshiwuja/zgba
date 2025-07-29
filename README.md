@@ -1,6 +1,7 @@
 # ZGBA
 
-zig wrapper for libtonc or tonclib
+Zig library to write and compile .gba games. 
+Wrapper around libtonc (tonclib)
 
 NOT READY YET
 
