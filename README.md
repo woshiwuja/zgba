@@ -2,6 +2,8 @@
 
 zig wrapper for libtonc or tonclib
 
+NOT READY YET
+
 ## Installing
 
 Simply fetch the repo
